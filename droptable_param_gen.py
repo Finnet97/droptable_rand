@@ -1,14 +1,3 @@
-## Crate
-## Models
-## Melee
-## Power-Up
-## Body
-## Unique
-## Special
-## tier
-## Hat
-## Mask
-## Effect
 
 print("Hola! Bienvenido al algoritmo de generación de cajas unity.")
 print("Recuerde configurar la ruta de su archivo droptable.lua para que el programa funcione.")
