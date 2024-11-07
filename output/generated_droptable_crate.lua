@@ -1,20 +1,695 @@
 
 -- Cajas seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 1
-ITEM.Name = 'Caja Alfa'
-ITEM.Description = 'Esta caja contiene un item de la Colección Alfa, click derecho para abrirla'
-ITEM.Image = 'https://www.unitynetworks.net.ar/ttt/iconos/maletin_alpha_final.png'
-ITEM.Rarity = 2
-ITEM.Collection = 'Colección Alfa'
-ITEM.Active = true
-ITEM.Stackable = true
-ITEM.Price = 2000
-m_AddDroppableItem(ITEM, 'Crate')
-
-
 
 -- Modelos seleccionados aleatoriamente --
+ITEM = {}
+ITEM.ID = 13
+ITEM.Name = "Ciudadano 5"
+ITEM.Description = "Simplemente un ciudadano masculino."
+ITEM.Model = "models/player/Group01/male_05.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 11
+ITEM.Name = "Ciudadano 3"
+ITEM.Description = "Simplemente un ciudadano masculino."
+ITEM.Model = "models/player/Group01/male_03.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 44
+ITEM.Name = "Rebelde Femenina 4"
+ITEM.Description = "Simplemente una rebelde femenina."
+ITEM.Model = "models/player/Group03/female_04.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 66
+ITEM.Name = "Medica Femenina 3"
+ITEM.Description = "Te cura en donde sea que estés."
+ITEM.Model = "models/player/Group03m/female_03.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 39
+ITEM.Name = "Rebelde Masculino 8"
+ITEM.Description = "Simplemente un rebelde masculino."
+ITEM.Model = "models/player/Group03/male_08.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 67
+ITEM.Name = "Medica Femenina 4"
+ITEM.Description = "Te cura en donde sea que estés."
+ITEM.Model = "models/player/Group03m/female_04.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 57
+ITEM.Name = "Medico Masculino 3"
+ITEM.Description = "Te cura en el campo de batalla."
+ITEM.Model = "models/player/Group03m/male_03.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 56
+ITEM.Name = "Medico Masculino 2"
+ITEM.Description = "Te cura en el campo de batalla."
+ITEM.Model = "models/player/Group03m/male_02.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 69
+ITEM.Name = "Medica Femenina 6"
+ITEM.Description = "Te cura en donde sea que estés."
+ITEM.Model = "models/player/Group03m/female_06.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "50/50 Collection"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 58
+ITEM.Name = "Medico Masculino 4"
+ITEM.Description = "Te cura en el campo de batalla."
+ITEM.Model = "models/player/Group03m/male_04.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 62
+ITEM.Name = "Medico Masculino 8"
+ITEM.Description = "Te cura en el campo de batalla."
+ITEM.Model = "models/player/Group03m/male_08.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 10
+ITEM.Name = "Ciudadano 2"
+ITEM.Description = "Simplemente un ciudadano masculino."
+ITEM.Model = "models/player/Group01/male_02.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 20
+ITEM.Name = "Ciudadana 3"
+ITEM.Description = "Solo una ciudadana común y corriente."
+ITEM.Model = "models/player/Group01/female_03.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 17
+ITEM.Name = "Ciudadano 9"
+ITEM.Description = "Simplemente un ciudadano masculino."
+ITEM.Model = "models/player/Group01/male_09.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 40
+ITEM.Name = "Rebelde Masculino 9"
+ITEM.Description = "Simplemente un rebelde masculino."
+ITEM.Model = "models/player/Group03/male_09.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 36
+ITEM.Name = "Rebelde Masculino 5"
+ITEM.Description = "Simplemente un rebelde masculino."
+ITEM.Model = "models/player/Group03/male_05.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 55
+ITEM.Name = "Medico Masculino 1"
+ITEM.Description = "Te cura en el campo de batalla."
+ITEM.Model = "models/player/Group03m/male_01.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 38
+ITEM.Name = "Rebelde Masculino 7"
+ITEM.Description = "Simplemente un rebelde masculino."
+ITEM.Model = "models/player/Group03/male_07.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 32
+ITEM.Name = "Rebelde Masculino 1"
+ITEM.Description = "Simplemente un rebelde masculino."
+ITEM.Model = "models/player/Group03/male_01.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 18
+ITEM.Name = "Ciudadana 1"
+ITEM.Description = "Solo una ciudadana común y corriente."
+ITEM.Model = "models/player/Group01/female_01.mdl"
+ITEM.Rarity = 2
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 47
+ITEM.Name = "Eli Vance"
+ITEM.Description = "Apuesto a que no adivinas como perdió la pierna."
+ITEM.Model = "models/player/eli.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 54
+ITEM.Name = "Trabajador Abuelo"
+ITEM.Description = "La jubilación no alcanza..."
+ITEM.Model = "models/player/hostage/hostage_04.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 49
+ITEM.Name = "Barney Calhoun"
+ITEM.Description = "Todavía te debe una cerveza."
+ITEM.Model = "models/player/barney.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 48
+ITEM.Name = "Alyx Vance"
+ITEM.Description = "Le tiene ganas a cierto ex-físico de Black Mesa."
+ITEM.Model = "models/player/alyx.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 50
+ITEM.Name = "Odessa Cubbage"
+ITEM.Description = "¿No te había visto en un barco?"
+ITEM.Model = "models/player/odessa.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 26
+ITEM.Name = "Arne Magnusson"
+ITEM.Description = "Magnificas mecánicas de microondas..."
+ITEM.Model = "models/player/magnusson.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 51
+ITEM.Name = "Trabajador Asiatico"
+ITEM.Description = "Simplemente un trabajadol masculino plomedio."
+ITEM.Model = "models/player/hostage/hostage_01.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 52
+ITEM.Name = "Trabajador Hombre"
+ITEM.Description = "Su cara es rara. Parece reciclada..."
+ITEM.Model = "models/player/hostage/hostage_02.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 53
+ITEM.Name = "Trabajador Viejo"
+ITEM.Description = "Este iba a ser el papa de Alyx Vance."
+ITEM.Model = "models/player/hostage/hostage_03.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 29
+ITEM.Name = "Guerrillero"
+ITEM.Description = "Solía poner bombas en jardines de infantes..."
+ITEM.Model = "models/player/guerilla.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 30
+ITEM.Name = "Leet"
+ITEM.Description = "Viene de oriente medio, ya te imaginas..."
+ITEM.Model = "models/player/leet.mdl"
+ITEM.Rarity = 3
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13018
+ITEM.Name = "Hunter Skin"
+ITEM.Description = "Cuando lo veas saltar, será mejor que corras."
+ITEM.Model = "models/player/hunter.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13005
+ITEM.Name = "Chris Redfield Skin"
+ITEM.Description = "Tragate esto, Wesker!."
+ITEM.Model = "models/player/chris.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 24
+ITEM.Name = "Gordon Freeman"
+ITEM.Description = "No necesitarías todo eso para apresarlo..."
+ITEM.Model = "models/player/gordon.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13031
+ITEM.Name = "Ladrón Skin"
+ITEM.Description = "¿Teneh hora compa?."
+ITEM.Model = "models/player/robber.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13044
+ITEM.Name = "Traje de Contención Skin"
+ITEM.Description = "Combate virus y bacterias."
+ITEM.Model = "models/player/aphaztech.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 70
+ITEM.Name = "Combine Elite"
+ITEM.Description = "¿Bad Cop sos vos?"
+ITEM.Model = "models/player/combine_super_soldier.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 27
+ITEM.Name = "G-Man"
+ITEM.Description = "Buen día Doctor Freeman..."
+ITEM.Model = "models/player/gman_high.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13053
+ITEM.Name = "Zoey LFD Skin"
+ITEM.Description = 'Matando zombies desde el 2008.'
+ITEM.Model = "models/player/zoey.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13012
+ITEM.Name = "Postal Dude Skin"
+ITEM.Description = "El único que puede matarte 10 veces antes que caigas al suelo."
+ITEM.Model = "models/player/dude.mdl"
+ITEM.Rarity = 4
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 71
+ITEM.Name = "Metrocop"
+ITEM.Description = "Él solo busca estimulación mecánica..."
+ITEM.Model = "models/player/police.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 31
+ITEM.Name = "Phoenix"
+ITEM.Description = "Clásica apariencia del operador Phoenix."
+ITEM.Model = "models/player/phoenix.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Alfa"
+ITEM.SecondaryCollections = {
+	["Colección Aniversario"] = true
+	--["Collection y"] = true
+}
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13017
+ITEM.Name = "Harry Potter"
+ITEM.Description = "Uh, la pareste de pecho colorado!"
+ITEM.Model = "models/player/harry_potter.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 2101
+ITEM.Name = "CT - GIGN"
+ITEM.Description = "Siendo tacticos desde 2006"
+ITEM.Model = "models/player/swat.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Aniversario"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13038
+ITEM.Name = "Shaun Skin"
+ITEM.Description = "Personaje de Shaun of the dead."
+ITEM.Model = "models/player/shaun.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13011 --models/jaanus/santa.mdl
+ITEM.Name = "Gatubela Skin"
+ITEM.Description = "Miau."
+ITEM.Model = "models/kaesar/moat/catwoman/catwoman.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13033
+ITEM.Name = "Rorschach Skin"
+ITEM.Description = "La noticia es cómo el mundo grita de dolor. Necesitan oírlo, constantemente. Una y otra vez."
+ITEM.Model = "models/player/rorschach.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13047
+ITEM.Name = "Stormtrooper Skin"
+ITEM.Description = "¡Por el Imperio!"
+ITEM.Model = "models/player/stormtrooper.mdl"
+ITEM.Rarity = 5
+ITEM.Collection = "Colección Aniversario"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13020
+ITEM.Name = "Isaac Clarke Skin"
+ITEM.Description = "Una nave espacial y millones de ingenieros ¿Porque yo?."
+ITEM.Model = "models/player/security_suit.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Delta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13000
+ITEM.Name = "Walter White Skin"
+ITEM.Description = [["Say my name". "I am the one who knocks". "You're Goddamn Right".]]
+ITEM.Model = "models/agent_47/agent_47.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13036
+ITEM.Name = "Scorpion Skin"
+ITEM.Description = "GET OVER HERE!."
+ITEM.Model = "models/player/scorpion.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Gamma"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13021
+ITEM.Name = "Spider-Man Skin"
+ITEM.Description = "Un gran poder conlleva una gran responsabilidad."
+ITEM.Model = "models/otv/scarletspider.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13070
+ITEM.Name = "Brook"
+ITEM.Description = "YO hohohoho"
+ITEM.Model = "models/one_piece/straw_hat_pirates/brook.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Titán"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13046
+ITEM.Name = "Ash Ketchum Skin"
+ITEM.Description = "¡Atrápalos a todos!."
+ITEM.Model = "models/player/ashp.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 73
+ITEM.Name = "Zombie Skin"
+ITEM.Description = "No escuches sus gritos en reversa..."
+ITEM.Model = "models/player/zombie_classic.mdl"
+ITEM.Rarity = 6
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13019
+ITEM.Name = "Iron Man Skin"
+ITEM.Description = "Mi padre lloró el día en que nací porque sabía que nunca iba a ser mejor que yo."
+ITEM.Model = "models/avengers/iron man/mark7_player.mdl"
+ITEM.Rarity = 7
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13059
+ITEM.Name = "Obi Wan Kenobi"
+ITEM.Description = 'Hello There!'
+ITEM.Model = "models/kaiido/obi_wan.mdl"
+ITEM.Rarity = 7
+ITEM.Collection = "Colección Aniversario"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
 ITEM = {}
 ITEM.ID = 13060
 ITEM.Name = "Ahsoka Tano"
@@ -27,203 +702,109 @@ function ITEM:OnPlayerSpawn(ply)
 end
 m_AddDroppableItem(ITEM, 'Model')
 
+ITEM = {}
+ITEM.ID = 75
+ITEM.Name = "CT - GSG 9"
+ITEM.Description = "Soy Willy, soy un alemán, un loco alemán..."
+ITEM.Model = "models/player/riot.mdl"
+ITEM.Rarity = 7
+ITEM.Collection = "Colección Beta"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13035 --models/gonzo/crimboclonesv2/santa/santa.mdl
+ITEM.Name = "Jesus Skin"
+ITEM.Description = "Si ves a Júdas, corre."
+ITEM.Model = "models/player/jesus/jesus.mdl"
+ITEM.Rarity = 7
+ITEM.Collection = "Colección Alfa"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13002
+ITEM.Name = "Boba Fett Skin"
+ITEM.Description = "Like a Bantha."
+ITEM.Model = "models/player/bobafett.mdl"
+ITEM.Rarity = 7
+ITEM.Collection = "Colección Aniversario"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 28
+ITEM.Name = "Artico"
+ITEM.Description = "Abrigado, para cometer delitos."
+ITEM.Model = "models/player/arctic.mdl"
+ITEM.Rarity = 8
+ITEM.Collection = "Colección Titán"
+ITEM.SecondaryCollections = {
+	["Colección Aniversario"] = true
+	--["Collection y"] = true
+  }
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13056
+ITEM.Name = "Darth Vader"
+ITEM.Description = 'Yo soy tu padre'
+ITEM.Model = "models/player/darth_vader.mdl"
+ITEM.Rarity = 8
+ITEM.Collection = "Colección Aniversario"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13071
+ITEM.Name = "Jotaro"
+ITEM.Description = "Yare Yare Daze... ORA!"
+ITEM.Model = "models/player/jojo3/jtr.mdl"
+ITEM.Rarity = 8
+ITEM.Collection = "Colección Fenix"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
+ITEM = {}
+ITEM.ID = 13055
+ITEM.Name = "Deadpool"
+ITEM.Description = 'Máximo Esfuerzo!'
+ITEM.Model = "models/kryptonite/deadpool/deadpool.mdl"
+ITEM.Rarity = 8
+ITEM.Collection = "Colección Fenix"
+function ITEM:OnPlayerSpawn(ply)
+	timer.Simple(1, function() ply:SetModel(self.Model) end)
+end
+m_AddDroppableItem(ITEM, 'Model')
+
 
 -- Armas melee seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 83
-ITEM.Name = "Espada de Diamante"
-ITEM.WeaponClass = "weapon_diamond_sword"
-ITEM.NameColor = Color(0, 255, 255)
-ITEM.Rarity = 6
-ITEM.Collection = "Colección Melee"
-ITEM.MinStats = 5
-ITEM.MinStats = 5
-ITEM.Stats = {
-	Weight = {min = -20, max = -30},
-	Damage = {min = 10, max = 25},
-	Firerate = {min = 10, max = 30},
-	Pushrate = {min = 5, max = 10},
-	Force = {min = 13, max = 35}
-}
-ITEM.MinTalents = 0
-ITEM.MaxTalents = 3
-ITEM.Talents = {"random", "random", "random"}
-ITEM.ID = ITEM.ID + 10000
-m_AddDroppableItem(ITEM, 'Melee')
-
 
 -- Power-ups seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 99
-ITEM.Name = "Amante de la Experiencia"
-ITEM.NameColor = Color(255, 0, 255)
-ITEM.Description = "Gana %s_ más de experiencia al matar enemigos legitimamente."
-ITEM.Image = "https://www.unitynetworks.net.ar/ttt/iconos/xp_powerup64.png" 
-ITEM.Rarity = 5
-ITEM.Collection = "Colección Gamma"
-ITEM.Stats = {
-	{ min = 25, max = 75 }
-}
-function ITEM:OnPlayerSpawn( ply, powerup_mods )
-	local xp_multi = 1 + ((self.Stats[1].min + ((self.Stats[1].max - self.Stats[1].min) * math.min(1, powerup_mods[1]))) / 100)
-	ply.ExtraXP = xp_multi
-end
-m_AddDroppableItem(ITEM, 'Power-Up')
-
 
 -- Accesorios 'body' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.Name = "Mochila táctica gris"
-ITEM.ID = 574
-ITEM.Description = "¿Qué tenes ahí?"
-ITEM.Rarity = 5
-ITEM.Collection = "Colección Delta" 
-ITEM.SecondaryCollections = {
-    ["Colección de Accesorios"] = true
-    --["Collection y"] = true
-  }
-ITEM.Skin = 1
-ITEM.Model = "models/modified/backpack_3.mdl"
-ITEM.Bone = "ValveBiped.Bip01_Spine2"
-function ITEM:ModifyClientsideModel(ply, model, pos, ang)
-	model:SetSkin(1)
-	model:SetModelScale(1, 0)
-	pos = pos + (ang:Right() * -2.3) + (ang:Up() * 0) + (ang:Forward() * 0.9)
-	ang:RotateAroundAxis(ang:Up(), 90)
-	ang:RotateAroundAxis(ang:Right(), 0)
-	ang:RotateAroundAxis(ang:Forward(), 90)
-	return model, pos, ang
-end
-m_AddDroppableItem(ITEM, 'Body')
-
 
 -- Accesorios 'hat' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 9022
-ITEM.Name = "Fedora"
-ITEM.Description = "Que no importan lo que diga, te queda fachero"
-ITEM.Model = "models/gmod_tower/fedorahat.mdl"
-ITEM.Rarity = 3
-ITEM.Collection = "Colección de Accesorios"
-ITEM.Attachment = "eyes"
-function ITEM:ModifyClientsideModel(ply, model, pos, ang)
-	model:SetModelScale(1.1, 0)
-	pos = pos + (ang:Forward() * -3.6) + (ang:Up() * 2.5) + m_IsTerroristModel(ply:GetModel())
-	return model, pos, ang
-end
-m_AddDroppableItem(ITEM, 'Hat')
-
 
 -- Accesorios 'mask' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 9157
-ITEM.Rarity = 7
-ITEM.Name = "Casco Daft Punk"
-ITEM.Description = "She's up all night to the sun, I'm up all night to get some, She's up all night for good fun, I'm up all night to get lucky"
-ITEM.Collection = "Colección Gamma"
-ITEM.SecondaryCollections = {
-    ["Colección de Accesorios"] = true
-    --["Collection y"] = true
-  }
-ITEM.Model = "models/custom_prop/moatgaming/daft/daft.mdl"
-ITEM.Attachment = "eyes"
-function ITEM:ModifyClientsideModel(pl, m, p, a)
-	m:SetModelScale(1.15)
-	p = p + (a:Forward() * -4.608)+ (a:Right() * 0.006)+ (a:Up() * -4.951)
-	return m, p, a
-end
-m_AddDroppableItem(ITEM, 'Mask')
-
 
 -- Ítems 'unique' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 7519
-ITEM.Name = "Antojo de asesino"
-ITEM.Rarity = 6
-ITEM.Collection = "Colección Veneno"
-ITEM.WeaponClass = "weapon_doubleb"
-ITEM.MinStats = 4
-ITEM.MaxStats = 5
-ITEM.Stats = {
-	Damage = {min = 14, max = 23},
-	Accuracy = {min = 14, max = 23},
-	Kick = {min = -14, max = -23},
-	Firerate = {min = 14, max = 23},
-	Magazine = {min = 19, max = 28},
-	Range = {min = 19, max = 28},
-	Weight = {min = -4, max = -7}
-}
-ITEM.MinTalents = 2
-ITEM.MaxTalents = 3
-ITEM.Talents = {"Fenix", "random", "random"}
-m_AddDroppableItem(ITEM, 'Unique')
-
 
 -- Ítems 'special' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.Name = "Burla: Zombie"
-ITEM.ID = 116
-ITEM.Description = "El baile del no muerto"
-ITEM.Rarity = 6
-ITEM.Image = "https://www.unitynetworks.net.ar/ttt/iconos/moat_taunt.png"
-ITEM.Collection = "Colección Delta"
-ITEM.WeaponClass = "weapon_ttt_taunt_climb"
-m_AddDroppableItem(ITEM, 'Special')
-
 
 -- Ítems 'effect' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.Name = "Hamburguesa efecto"
-ITEM.ID = 217
-ITEM.Description = "Lo que preparo después de estudiar 4 años la carrera de diseñador grafico"
-ITEM.Rarity = 4
-ITEM.Collection = "Colección de Efectos"
-ITEM.Model = "models/food/burger.mdl"
-ITEM.Bone = "ValveBiped.Bip01_Spine4"
-ITEM.EffectColor = Color(241,151,17)
-function ITEM:ModifyClientsideModel(ply, model, pos, ang)
-	local Size = Vector(1,1,1)
-	local mat = Matrix()
-	mat:Scale(Size)
-	model:EnableMatrix("RenderMultiply", mat)
-	model:SetMaterial("")
-	local MAngle = Angle(100.1699,360,280.1700)
-	local MPos = Vector(-5.829,-2.609,-7.829)
-	pos = pos + (ang:Forward() * MPos.x) + (ang:Up() * MPos.z) + (ang:Right() * MPos.y)
-	ang:RotateAroundAxis(ang:Forward(), MAngle.p)
-	ang:RotateAroundAxis(ang:Up(), MAngle.y)
-	ang:RotateAroundAxis(ang:Right(), MAngle.r)
-	model.ModelDrawingAngle = model.ModelDrawingAngle or Angle(0,0,0)
-	model.ModelDrawingAngle.p = (CurTime() * 0 *90)
-	model.ModelDrawingAngle.y = (CurTime() * 1.129 *90)
-	model.ModelDrawingAngle.r = (CurTime() * 0 *90)
-	ang:RotateAroundAxis(ang:Forward(), (model.ModelDrawingAngle.p))
-	ang:RotateAroundAxis(ang:Up(), (model.ModelDrawingAngle.y))
-	ang:RotateAroundAxis(ang:Right(), (model.ModelDrawingAngle.r))
-	return model, pos, ang
-end
-m_AddDroppableItem(ITEM, 'Effect')
-
 
 -- Ítems 'tier' seleccionados aleatoriamente --
-ITEM = {}
-ITEM.ID = 2004
-ITEM.Name = "Básica"
-ITEM.Rarity = 2
-ITEM.Collection = "Colección Alfa"
-ITEM.NameColor = Color(255, 229, 204)
-ITEM.MinStats = 1
-ITEM.MaxStats = 2
-ITEM.Stats = {
-	Damage = {min = 0, max = 5},
-	Accuracy = {min = -2, max = 5},
-	Kick = {min = -1, max = -2},
-	Firerate = {min = 0, max = 5},
-	Magazine = {min = -5, max = 5},
-	Range = {min = -2, max = 5},
-}
-ITEM.MinTalents = 1
-ITEM.MaxTalents = 1
-ITEM.Talents = {"random"}
-m_AddDroppableItem(ITEM, 'tier')
-

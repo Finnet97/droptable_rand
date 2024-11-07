@@ -9,6 +9,7 @@ print("")
 
 import os
 import random
+from collections import defaultdict
 
 def get_user_input():
     """Solicita al usuario el número de cajas, modelos, armas melee, power-ups y accesorios a generar, asegurando que los valores no sean negativos."""
@@ -37,26 +38,17 @@ def get_user_input():
         except ValueError:
             print("Por favor, ingrese un número entero válido.")
 
-def generate_item_block(crate_index):
-    """Genera el bloque de código Lua para un ítem de caja con un ID único."""
-    block = (
-        f"ITEM = {{}}\n"
-        f"ITEM.ID = {crate_index}\n"
-        f"ITEM.Name = 'Caja Alfa'\n"
-        f"ITEM.Description = 'Esta caja contiene un item de la Colección Alfa, click derecho para abrirla'\n"
-        f"ITEM.Image = 'https://www.unitynetworks.net.ar/ttt/iconos/maletin_alpha_final.png'\n"
-        f"ITEM.Rarity = 2\n"
-        f"ITEM.Collection = 'Colección Alfa'\n"
-        f"ITEM.Active = true\n"
-        f"ITEM.Stackable = true\n"
-        f"ITEM.Price = 2000\n"
-        f"m_AddDroppableItem(ITEM, 'Crate')\n\n"
-    )
-    return block
+def parse_block(block):
+    """Extrae la rareza de un bloque de código."""
+    for line in block:
+        if "ITEM.Rarity" in line:
+            rarity = int(line.split("=")[-1].strip())
+            return rarity
+    return None
 
 def read_blocks_from_file(filepath, item_type):
-    """Lee el archivo de entrada y extrae bloques de ítems del tipo especificado."""
-    blocks = []
+    """Lee el archivo de entrada y extrae bloques de ítems del tipo especificado, organizados por rareza."""
+    blocks_by_rarity = defaultdict(list)
     with open(filepath, "r", encoding="utf-8") as file:
         block = []
         in_block = False
@@ -67,15 +59,27 @@ def read_blocks_from_file(filepath, item_type):
             elif in_block:
                 block.append(line)
                 if f"m_AddDroppableItem(ITEM, '{item_type}')" in line:
-                    blocks.append("".join(block))
+                    rarity = parse_block(block)
+                    blocks_by_rarity[rarity].append("".join(block))
                     in_block = False
                 elif line.strip() == "":
                     in_block = False
-    return blocks
+    return blocks_by_rarity
 
-def select_random_blocks(blocks, count):
-    """Selecciona aleatoriamente una cantidad de bloques del tipo especificado."""
-    return random.sample(blocks, min(count, len(blocks)))
+def select_proportional_blocks(blocks_by_rarity, count):
+    """Selecciona una cantidad proporcional de bloques de cada rareza."""
+    selected_blocks = []
+    rarities = sorted(blocks_by_rarity.keys())
+    
+    # Definir proporciones para cada rareza (ejemplo simplificado)
+    proportions = {1: 0.3, 2: 0.2, 3: 0.15, 4: 0.1, 5: 0.08, 6: 0.07, 7: 0.06, 8: 0.04}
+    
+    for rarity in rarities:
+        if rarity in proportions:
+            num_to_select = max(1, int(count * proportions[rarity]))  # Asegura al menos 1 item por rareza si hay bloques disponibles
+            selected_blocks.extend(random.sample(blocks_by_rarity[rarity], min(num_to_select, len(blocks_by_rarity[rarity]))))
+    
+    return selected_blocks[:count]  # Limitar al total solicitado
 
 def create_lua_file(crate_count, model_count, melee_count, power_up_count,
                     body_count, hat_count, mask_count, unique_count, special_count, effect_count, tier_count):
@@ -97,7 +101,7 @@ def create_lua_file(crate_count, model_count, melee_count, power_up_count,
     effect_blocks = read_blocks_from_file(input_filepath, "Effect")
     tier_blocks = read_blocks_from_file(input_filepath, "tier")
     
-    # Seleccionar bloques aleatorios de cada categoría y notificar si no se añadió ninguno
+    # Seleccionar bloques proporcionalmente de cada categoría
     categories = [
         ("cajas", crate_count, None),
         ("modelos", model_count, model_blocks),
@@ -113,14 +117,14 @@ def create_lua_file(crate_count, model_count, melee_count, power_up_count,
     ]
     
     selected_blocks = {}
-    for category, count, blocks in categories:
+    for category, count, blocks_by_rarity in categories:
         if count == 0:
             print(f"Ningún {category} fue añadido al contenido final.")
             selected_blocks[category] = []
-        elif blocks is not None:
-            selected_blocks[category] = select_random_blocks(blocks, count)
+        elif blocks_by_rarity is not None:
+            selected_blocks[category] = select_proportional_blocks(blocks_by_rarity, count)
         else:
-            selected_blocks[category] = [generate_item_block(i) for i in range(1, count + 1)]
+            selected_blocks[category] = [generate_item_block(i) for i in range(1, count + 1)] # type: ignore
     
     # Escribir en el archivo de salida
     with open(filename, "w", encoding="utf-8") as file:
